@@ -19,13 +19,12 @@ body {
 
 .navbar {
   height: 60px;
-  background-color: black;
+  background-color: yellow;
   position: relative;
 }
 
 .logo {
 }
-
 .nav-elements {
 }
 
@@ -42,12 +41,12 @@ body {
 .nav-elements ul a {
   font-size: 16px;
   font-weight: 400;
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
 .nav-elements ul a.active {
-  color: yellow;
+  color: blue;
   font-weight: 500;
   position: relative;
 }

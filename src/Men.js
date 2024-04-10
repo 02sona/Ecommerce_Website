@@ -12,9 +12,15 @@ import {
     MDBBtn
   } from 'mdb-react-ui-kit';
 import Footer from './Footer';
-
+import { useNavigate } from "react-router-dom";
 function Men()
 {
+  const navigate = useNavigate();
+  function getId(pid)
+  {
+    const data = {name:pid, add:"Indore"}
+    navigate("/item",{state:data})
+  }
     const [apidata,setapidata]=useState([])
     useEffect(()=>{
           fetch("https://fakestoreapi.com/products/category/men's%20clothing").then((resp)=>{
@@ -44,7 +50,7 @@ function Men()
             <MDBCardTitle>{item.category}</MDBCardTitle>
             <MDBCardText>{item.description.slice(0, 100)}</MDBCardText>
             <MDBCardTitle>Rating : {item.rating.rate}</MDBCardTitle>
-            <MDBBtn>View Details</MDBBtn>
+            <MDBBtn onClick={()=>getId(item.id)}>View Details{item.id}</MDBBtn>
           </MDBCardBody>
         </MDBCard>
       </MDBCol>

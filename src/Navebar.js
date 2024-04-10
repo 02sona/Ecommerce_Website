@@ -6,13 +6,13 @@ import Men from './Men'
 import Women from './Women'
 import Electronics from './Electronics'
 import Jwellery from './Jwellery'
+import Item from './Item'
 
 const Navebar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <br></br>
-        <br></br>
+        <h1>Trend Sparkers</h1>
         <div className="logo">
           <Brand />
         </div>
@@ -41,6 +41,7 @@ const Navebar = () => {
             <Route path="/women" element={<Women></Women>}></Route>
             <Route path="/electronics" element={<Electronics></Electronics>}></Route>
             <Route path="/jwellery" element={<Jwellery></Jwellery>}></Route>
+            <Route path="/item" element={<Item></Item>}></Route>
         </Routes>
       </div>
     </nav>
